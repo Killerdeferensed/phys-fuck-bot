@@ -27,13 +27,13 @@ public class Bot extends TelegramLongPollingBot
 			
 			SendMessage sendMessage = SendMessage.builder()
 					.chatId(userId.toString())
-					.text("UwU Daddy fuck me hard!")
+					.text(String.format("Received message!%nFrom: {%s}%nText:{%s}", userFirstName, textFromUser))
 					.build();
-			/*try {
+			try {
 				this.sendApiMethod(sendMessage);
 			} catch (TelegramApiException e) {
 				log.error("I can`t fuck you, son", e);
-			}*/
+			}
 		} else {
 			log.warn("Damn, what the fuck are you talking about?");
 		}
